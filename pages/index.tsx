@@ -17,7 +17,7 @@ const Home: NextPage = () => {
   const isValidateForm = (): boolean => {
     const validateName = name.trim()
 
-    if (!name || validateName) {
+    if (!name || validateName === '') {
       setErrors({ ...errors, name: 'Nome é requerido' })
       return false
     }
